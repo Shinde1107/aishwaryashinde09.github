@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aishwarya Shinde | Data Analyst & Data Science Aspirant</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f6f8fc;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #111827;
+            padding: 16px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 22px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav ul li a:hover {
+            color: #60a5fa;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #111827, #2563eb);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            color: #e5e7eb;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            margin: 7px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            background: white;
+            color: #2563eb;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* GENERAL SECTION */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #111827;
+        }
+
+        /* ABOUT */
+
+        .about-box {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .skill {
+            background: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            font-weight: bold;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            margin-bottom: 15px;
+        }
+
+        .tech {
+            display: inline-block;
+            background: #e0e7ff;
+            padding: 5px 9px;
+            border-radius: 5px;
+            margin: 3px;
+            font-size: 12px;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #2563eb;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* CARDS */
+
+        .cards {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+        }
+
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+
+        /* RESUME */
+
+        .resume-section {
+            background: #eef2ff;
+        }
+
+        .resume-box {
+            max-width: 800px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .resume-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .resume-card h3 {
+            margin-bottom: 10px;
+            color: #2563eb;
+        }
+
+        .resume-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 11px 20px;
+            background: #2563eb;
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            margin: 10px 0;
+        }
+
+        .contact a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0b1120;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 750px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">
+        Aishwarya Shinde
+    </div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- HOME -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Aishwarya Shinde</h1>
+
+        <h2>Data Analyst | Data Science Aspirant</h2>
+
+        <p>
+            B.Tech Computer Science graduate passionate about
+            Data Analytics, Machine Learning, SQL, Python,
+            Power BI and solving real-world problems through data.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#projects" class="btn">
+                View Projects
+            </a>
+
+            <a href="#resume" class="btn btn-outline">
+                View Resume
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="about-box">
+
+        <p>
+            I am Aishwarya Shinde, a B.Tech Computer Science and
+            Technology graduate from Shivaji University, Kolhapur.
+            I am interested in Data Analytics and Data Science.
+        </p>
+
+        <br>
+
+        <p>
+            I enjoy working with Python, SQL, Power BI, Excel and
+            Machine Learning to clean, analyze and visualize data
+            and convert it into meaningful insights.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <h2>Technical Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill">Python</div>
+        <div class="skill">SQL</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">PostgreSQL</div>
+        <div class="skill">Power BI</div>
+        <div class="skill">Tableau</div>
+        <div class="skill">Advanced Excel</div>
+        <div class="skill">Pandas</div>
+        <div class="skill">NumPy</div>
+        <div class="skill">Matplotlib</div>
+        <div class="skill">Scikit-learn</div>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">Data Analysis</div>
+        <div class="skill">Statistics</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">AWS</div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <h2>Featured Projects</h2>
+
+    <div class="projects">
+
+
+        <!-- Regression -->
+
+        <div class="project-card">
+
+            <h3>Regression Analysis</h3>
+
+            <p>
+                Built a regression-based machine learning project
+                to analyze relationships between variables and
+                generate predictive insights.
+            </p>
+
+            <span class="tech">Python</span>
+            <span class="tech">Pandas</span>
+            <span class="tech">Scikit-learn</span>
+            <span class="tech">Regression</span>
+
+            <br>
+
+            <a href="#" class="project-link">
+                View Project →
+            </a>
+
+        </div>
+
+
+        <!-- Smart Hire -->
+
+        <div class="project-card">
+
+            <h3>Smart Hire</h3>
+
+            <p>
+                Developed a recruitment-focused project designed
+                to support candidate analysis and improve the
+                hiring workflow.
+            </p>
+
+            <span class="tech">Python</span>
+            <span class="tech">Machine Learning</span>
+            <span class="tech">Data Analysis</span>
+
+            <br>
+
+            <a href="#" class="project-link">
+                View Project →
+            </a>
+
+        </div>
+
+
+        <!-- Retail Sales -->
+
+        <div class="project-card">
+
+            <h3>Retail Sales Analysis using SQL</h3>
+
+            <p>
+                Analyzed retail sales data using SQL queries to
+                identify sales trends, customer behavior and
+                product performance.
+            </p>
+
+            <span class="tech">SQL</span>
+            <span class="tech">MySQL</span>
+            <span class="tech">Data Analysis</span>
+
+            <br>
+
+            <a href="#" class="project-link">
+                View Project →
+            </a>
+
+        </div>
+
+
+        <!-- Customer Segmentation -->
+
+        <div class="project-card">
+
+            <h3>Customer Segmentation</h3>
+
+            <p>
+                Applied clustering techniques to segment customers
+                based on purchasing behavior, value and frequency.
+            </p>
+
+            <span class="tech">Python</span>
+            <span class="tech">K-Means</span>
+            <span class="tech">DBSCAN</span>
+
+            <br>
+
+            <a href="#" class="project-link">
+                View Project →
+            </a>
+
+        </div>
+
+
+        <!-- HR Analysis -->
+
+        <div class="project-card">
+
+            <h3>HR Analysis</h3>
+
+            <p>
+                Developed an HR analytics solution to understand
+                employee trends, attrition and workforce patterns
+                using data analysis and visualization.
+            </p>
+
+            <span class="tech">Power BI</span>
+            <span class="tech">SQL</span>
+            <span class="tech">Excel</span>
+
+            <br>
+
+            <a href="#" class="project-link">
+                View Project →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+    <h2>Experience</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Data Science Intern | Ai Variant</h3>
+
+            <p>
+                Sep 2025 – Jul 2026
+            </p>
+
+            <br>
+
+            <p>
+                Worked with Python and SQL for data cleaning,
+                transformation, exploratory analysis and
+                machine learning model development.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>AWS Cloud Intern | SkillDunia</h3>
+
+            <p>
+                Feb 2025 – Apr 2025
+            </p>
+
+            <br>
+
+            <p>
+                Worked with AWS Lambda, Amazon Lex and Amazon
+                Translate and gained practical exposure to
+                serverless cloud applications.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+    <h2>Education</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>B.Tech, Computer Science and Technology</h3>
+
+            <p>
+                Shivaji University, Kolhapur
+            </p>
+
+            <p>
+                CGPA: 7.3 | Expected 2026
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CERTIFICATIONS -->
+
+<section>
+
+    <h2>Certifications</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>IBM Data Scientist Professional Certificate</h3>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Deloitte Data Analytics Virtual Experience Program</h3>
+
+            <p>
+                Forage
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESUME -->
+
+<section id="resume" class="resume-section">
+
+    <h2>Resume</h2>
+
+    <div class="resume-box">
+
+
+        <!-- DATA ANALYST RESUME -->
+
+        <div class="resume-card">
+
+            <h3>Data Analyst Resume</h3>
+
+            <p>
+                View or download my Data Analyst focused resume.
+            </p>
+
+            <a
+                href="Aishwarya_Shinde_DA_Resume.pdf"
+                target="_blank"
+                class="resume-btn">
+                Open Resume
+            </a>
+
+            <br>
+
+            <a
+                href="Aishwarya_Shinde_DA_Resume.pdf"
+                download
+                class="resume-btn">
+                Download PDF
+            </a>
+
+        </div>
+
+
+        <!-- DATA SCIENCE RESUME -->
+
+        <div class="resume-card">
+
+            <h3>Data Science Resume</h3>
+
+            <p>
+                View or download my Data Science focused resume.
+            </p>
+
+            <a
+                href="AishwaryaShinde_Resume_DataScience.pdf"
+                target="_blank"
+                class="resume-btn">
+                Open Resume
+            </a>
+
+            <br>
+
+            <a
+                href="AishwaryaShinde_Resume_DataScience.pdf"
+                download
+                class="resume-btn">
+                Download PDF
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <h2>Let's Connect</h2>
+
+    <p>
+        I am open to opportunities in Data Analytics,
+        Data Science and related roles.
+    </p>
+
+    <br>
+
+    <p>
+        Email:
+        <a href="mailto:aishu1732@gmail.com">
+            aishu1732@gmail.com
+        </a>
+    </p>
+
+    <p>
+        Phone:
+        <a href="tel:+918459629245">
+            +91 8459629245
+        </a>
+    </p>
+
+    <p>
+        LinkedIn:
+        <a
+            href="https://www.linkedin.com/in/aishwaryashinde"
+            target="_blank">
+            LinkedIn Profile
+        </a>
+    </p>
+
+    <p>
+        GitHub:
+        <a
+            href="https://github.com/Shinde1107"
+            target="_blank">
+            GitHub Profile
+        </a>
+    </p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Aishwarya Shinde | Data Analyst & Data Science Portfolio
+    </p>
+
+</footer>
+
+</body>
+</html>
